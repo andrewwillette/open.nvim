@@ -17,16 +17,11 @@ function open.set_keymap(keymap, to_open)
     }, function(choice)
       for _, v in pairs(to_open) do
         if v.name == choice then
-          vim.fn.system("open " .. v.url)
+          vim.fn.system("open '" .. v.url .. "'")
         end
       end
     end)
   end, { silent = true })
 end
-
-open.set_keymap("<leader>tm", {
-  { name = "google", url = "https://google.com" },
-  { name = "yahoo",  url = "https://yahoo.com" },
-})
 
 return open
