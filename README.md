@@ -2,10 +2,10 @@
 Neovim plugin to configure keymaps for selecting an item and open it's corresponding URL.
 
 ```lua
-local openvim = require("open")
+local open = require("open")
 
-opennvim.set_keymap("<leader>bm", {
-  {name="google", url="https://google.com"},
-  {name="facebook", url="https://facebook.com"},
+open.set_keymap("<leader>bm", {
+  google = "https://google.com",
+  ["reddit board"] = "https://reddit.com",
 })
 ```
